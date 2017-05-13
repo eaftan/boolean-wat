@@ -26,8 +26,8 @@ java -cp classes B
 
 ## Why does it work?
 
-In the JVM spec for class files, boolean constants are represented as integers
-[spec]. Javac always uses 1 for true and 0 for false, but it is legal to have
+In the [JVM spec for class files][spec], boolean constants are represented as integers.
+Javac always uses 1 for true and 0 for false, but it is legal to have
 a class file that contains a `public static final boolean` with a value other 
 than 0 or 1.  
 
