@@ -36,7 +36,7 @@ is undefined.
 
 This trick works because the demo uses ASM to edit the value of the constant 
 field `A.A` to 2, then compiles B against the edited version.  The value of
-`A.A` is neither `true` (1) or `false` (0), so the print statement is executed.
+`A.A` is neither `true` (1) nor `false` (0), so the print statement is executed.
 
 ## What does it mean?
 
