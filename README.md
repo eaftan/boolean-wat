@@ -12,8 +12,8 @@ public class B {
 }
 ```
 
-Is it possible for this program to print "Wat"?  If I'm asking this, then you
-already know the answer.
+Is it possible for this program to print "Wat"?  If I'm asking this, you already
+know the answer.
 
 ## Instructions
 
