@@ -44,14 +44,12 @@ So, is this just a bug in javac, or a real problem with the Java or JVM spec?
 It's unclear.  We asked upstream for clarification, and they gave us [this cryptic 
 response][compiler-dev]:
 
-```
-In Lib.class, the field B contains a ConstantValue attribute that is not 
-ill-formed, since the attribute points to a CONSTANT_Integer c.p. entry 
-that is appropriate for a Z-typed field. A class file reader such as 
-javac must not reject Lib.class on this basis. However, javac should 
-handle an out-of-band value in the CONSTANT_Integer c.p. entry as a 
-quality-of-implementation detail.
-```
+> In Lib.class, the field B contains a ConstantValue attribute that is not 
+> ill-formed, since the attribute points to a CONSTANT_Integer c.p. entry 
+> that is appropriate for a Z-typed field. A class file reader such as 
+> javac must not reject Lib.class on this basis. However, javac should 
+> handle an out-of-band value in the CONSTANT_Integer c.p. entry as a 
+> quality-of-implementation detail.
 
 We ended up submitting a javac patch for this that issues an error on class
 files that contain such an out-of-range constant value, which was accepted.
